@@ -1,0 +1,212 @@
+.table {
+    width: 75%;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 8px; 
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.table th, .table td {
+    text-align: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #007BFF; 
+    color: white; 
+    font-weight: bold;
+    user-select: none;
+}
+
+.table tbody tr:hover {
+    background-color: #e9e9e9;
+    transform: scale(1.01);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tbody td {
+    position: relative;
+}
+
+.table tbody td:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2); 
+    pointer-events: none;
+}
+
+
+
+
+.loader,
+.end-message {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #666666;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+     height: 100px;
+}
+
+.search-box {
+    width: 50%; 
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-left: 1rem;
+}
+
+
+.navbar {
+    width: auto;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 10px 1px rgb(172, 139, 255);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-logo img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.navbar-logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.nav-items{
+    background-color: #7573739f;
+    padding: 1% 3px;
+    border-radius: 3%;
+    align-items: center;
+    text-align: center;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+    /* margin-right: 5px; */
+    font-size: 18px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-items:hover {
+    background-color: white;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.background{
+    background: #7F7FD5;  
+background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+
+}
+
+.city-weather {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: black;
+    min-height: 100vh;
+    transition: background-color 0.5s ease;
+}
+.bg-hot { background: linear-gradient(to top, #ff9a9e 0%, #f4982f 99%, #fecfef 100%); }
+.bg-cold { background: linear-gradient(to top, #a18cd1 100%, #5faff6 10%); }
+.bg-rainy { background: linear-gradient(to top, #77b5f4 0%, rgb(129, 224, 255) 100%); }
+.bg-sunny { background: linear-gradient(to right, #f7971e, #ffd200); }
+.bg-cloudy { background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); }
+.city-weather { transition: background-color 0.5s ease; }
+
+.city-weather h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #001609;
+}
+
+.city-weather p{
+    color: black;
+}
+
+.section {
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin: 20px 0;
+}
+
+.section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+
+.section p {
+    font-size: 1rem;
+}
+
+.weather-icon {
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .city-weather {
+        padding: 10px;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section p {
+        font-size: 1.1rem;
+    }
+}

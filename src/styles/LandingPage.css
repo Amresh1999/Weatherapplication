@@ -1,0 +1,92 @@
+.landing {
+    text-align: center;
+    padding: 50px;
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-size: cover;
+    animation: bgAnimation 15s ease infinite;
+    width: auto;
+  }
+  
+  .animation-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .sun {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #ffd700 20%, #ff8c00 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotate 10s infinite linear;
+  }
+  
+  .cloud {
+    width: 120px;
+    height: 60px;
+    background: rgb(13, 162, 255);
+    border-radius: 50px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow:
+      160px -20px 0 white,
+      320px -40px 0 white,
+      -80px 20px 0 rgb(27, 89, 136),
+      -160px 40px 0 white;
+    animation: moveClouds 8s infinite linear;
+  }
+  
+  @keyframes rotate {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+  }
+  
+  @keyframes moveClouds {
+    0% { left: 50%; }
+    50% { left: 55%; }
+    100% { left: 50%; }
+  }
+  
+  @keyframes bgAnimation {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .navigate-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .navigate-button:hover {
+    transform: scale(1.05);
+    background-color: #ff4500;
+  }
+  
+  h1 {
+    margin: 20px 0;
+    color: black;
+    font-size: 2.5rem;
+  }
+  
+  p {
+    color: #595a5b;
+    font-size: 1.2rem;
+  }
+  
