@@ -21,12 +21,11 @@ const getBackgroundClass = (weather) => {
         return 'bg-cloudy';
     }
 }
-const CityWeather = () => {
+const CityWeather = ({apiKey}) => {
     const { cityName } = useParams();
     const [weather, setWeather] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [backgroundClass, setBackgroundClass] = useState('bg-neutral');
-    const apiKey = '2b89a17cc968e0b6d3d8c702d43c19fe';
 
     useEffect(() => {
         const fetchWeather = async () => {
@@ -43,7 +42,7 @@ const CityWeather = () => {
         };
 
         fetchWeather();
-    }, [cityName]);
+    }, [cityName, apiKey]);
 
     if (isLoading) return <p>Loading weather data...</p>;
     if (!weather) return <p  style={{marginLeft:'35rem', marginTop:'20rem', fontSize:'2rem', color:'bold black'}}>No weather data available.</p>;

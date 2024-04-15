@@ -48,7 +48,7 @@ const CitiesTable = () => {
           page === 1
             ? response.data.records
             : [...cities, ...response.data.records];
-        setCities(sortData(newCities, sortConfig));
+            setCities(sortData(newCities, sortConfig));
         setHasMore(true);
       } else {
         setHasMore(false);
@@ -56,7 +56,7 @@ const CitiesTable = () => {
     };
 
     fetchCities();
-  }, [page, query, sortConfig]);
+  }, [page, query, sortConfig, cities]);
 
   const handleSearch = (e) => {
     setQuery(e.target.value);
